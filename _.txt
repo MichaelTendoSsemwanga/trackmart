@@ -1,0 +1,14 @@
+user
+	number
+	balance
+	currency
+	pin
+	notifications
+		date
+		nature
+		amount
+		number
+	
+	trransactions
+	token
+	

@@ -1,0 +1,130 @@
+{
+  "project_info": {
+    "project_number": "749473674350",
+    "firebase_url": "https://instant-money-uganda.firebaseio.com",
+    "project_id": "instant-money-uganda",
+    "storage_bucket": "instant-money-uganda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:749473674350:android:7005e8f37520add0",
+        "android_client_info": {
+          "package_name": "com.example.instantmoney"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "749473674350-bpprqn7e89c9e5krc0caa4l128rtdd3a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.instantmoney",
+            "certificate_hash": "d820d53ee8b0f0a01d9cb702996800c88fa1c1b9"
+          }
+        },
+        {
+          "client_id": "749473674350-q9hg9f4j9n2bnusf8tlhhep7nrhb5ag9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.instantmoney",
+            "certificate_hash": "92abe85fd88703ec8a63d99d4d5864c07cd6c731"
+          }
+        },
+        {
+          "client_id": "749473674350-buf0eueg7al4lijs5uhjnj9ha4apc0gv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8-f2IRWLo96YKCXg1veKo-vIsq8ZaZk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "749473674350-buf0eueg7al4lijs5uhjnj9ha4apc0gv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:749473674350:android:e5c082c59533eb0f",
+        "android_client_info": {
+          "package_name": "com.example.sandtrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "749473674350-55v07c5m1fj6tk3ujq7qt88lkmer8cvo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sandtrack",
+            "certificate_hash": "d820d53ee8b0f0a01d9cb702996800c88fa1c1b9"
+          }
+        },
+        {
+          "client_id": "749473674350-buf0eueg7al4lijs5uhjnj9ha4apc0gv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8-f2IRWLo96YKCXg1veKo-vIsq8ZaZk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "749473674350-buf0eueg7al4lijs5uhjnj9ha4apc0gv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:749473674350:android:8e3562cf22f054d8",
+        "android_client_info": {
+          "package_name": "com.example.sandtrackdriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "749473674350-o6ojca5vmfuvvbfce802qu062nnfo1ut.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sandtrackdriver",
+            "certificate_hash": "d820d53ee8b0f0a01d9cb702996800c88fa1c1b9"
+          }
+        },
+        {
+          "client_id": "749473674350-buf0eueg7al4lijs5uhjnj9ha4apc0gv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8-f2IRWLo96YKCXg1veKo-vIsq8ZaZk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "749473674350-buf0eueg7al4lijs5uhjnj9ha4apc0gv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
