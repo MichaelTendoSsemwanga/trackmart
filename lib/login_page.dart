@@ -82,7 +82,11 @@ class LoginPageState extends State<LoginPage> {
                         children: [
                           Padding(
                             padding: EdgeInsets.all(8),
-                            child: Icon(Icons.local_shipping,size:120,color: Theme.of(context).primaryColor,),
+                            child: Icon(
+                              Icons.local_shipping,
+                              size: 120,
+                              color: Theme.of(context).primaryColor,
+                            ),
                           ),
                           Center(
                             child: Text('Trackmart',
@@ -310,39 +314,43 @@ class LoginPageState extends State<LoginPage> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setString('id', user.uid);
     await prefs.setString('displayName', _name);
-    await prefs.setString('phoneNo', phoneNo!=null?(_countryCode+phoneNo):null);
+    await prefs.setString(
+        'phoneNo', phoneNo != null ? (_countryCode + phoneNo) : null);
     await prefs.setString('photoUrl', user.photoUrl);
-    login = !(fRef.collection('buyers').document(user.uid)==null);
-    if(login){
+    login = !(fRef.collection('buyers').document(user.uid) == null);
+    if (login) {
       print('old');
-    Map<String, dynamic> map =
-    (await fRef.collection('buyers').document(user.uid)?.get()).data;
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setString('id', user.uid);
-    await prefs.setString('displayName', map!=null?map['displayName']:_name);
-    await prefs.setString('photoUrl', map!=null?map['photoUrl']:null);
-    await prefs.setString('phoneNo', map!=null?map['phoneNo']:(phoneNo!=null?_countryCode+phoneNo:null));
-    }
-    else {
+      Map<String, dynamic> map =
+          (await fRef.collection('buyers').document(user.uid)?.get()).data;
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      await prefs.setString('id', user.uid);
+      await prefs.setString(
+          'displayName', map != null ? map['displayName'] : _name);
+      await prefs.setString('photoUrl', map != null ? map['photoUrl'] : null);
+      await prefs.setString(
+          'phoneNo',
+          map != null
+              ? map['phoneNo']
+              : (phoneNo != null ? _countryCode + phoneNo : null));
+    } else {
       print('new');
       await dRef.child('drivers').child(user.uid).set({
         'id': user.uid,
         'photoUrl': user.photoUrl,
         'displayName': _name,
-        'phoneNo': (phoneNo!=null?_countryCode+phoneNo:null)
+        'phoneNo': (phoneNo != null ? _countryCode + phoneNo : null)
       });
       await fRef.collection('buyers').document(user.uid).setData({
         'id': user.uid,
         'displayName': _name,
         'photoUrl': user.photoUrl,
-        'phoneNo': (phoneNo!=null?_countryCode+phoneNo:null)
+        'phoneNo': (phoneNo != null ? _countryCode + phoneNo : null)
       });
       await fRef.collection('users').document(user.uid).updateData({
         'displayName': _name,
         //'photoUrl': user.photoUrl,
-        'phoneNo': (phoneNo!=null?_countryCode+phoneNo:null)
+        'phoneNo': (phoneNo != null ? _countryCode + phoneNo : null)
       });
-
     }
   }
 
@@ -353,7 +361,7 @@ class LoginPageState extends State<LoginPage> {
       builder: (BuildContext context) {
         return AlertDialog(
           title: Text('Note'),
-          content: Text(message??'Try again'),
+          content: Text(message ?? 'Try again'),
           actions: <Widget>[
             new FlatButton(
               onPressed: () {
@@ -545,8 +553,8 @@ class LoginPageState extends State<LoginPage> {
       };
       final PhoneVerificationCompleted verifiedSuccess =
           (AuthCredential credential) async {
-        showSimple('Success',
-            'Retrieved SMS code... Saving user credentials...');
+        showSimple(
+            'Success', 'Retrieved SMS code... Saving user credentials...');
         try {
           FirebaseUser user = await fAuth.createUserWithEmailAndPassword(
               email: _countryCode + phoneNo + '@sandtrackapp.com',
@@ -560,7 +568,7 @@ class LoginPageState extends State<LoginPage> {
             FirebaseUser user = await fAuth.signInWithEmailAndPassword(
                 email: _countryCode + phoneNo + '@sandtrackapp.com',
                 password: _pin);
-            login=true;
+            login = true;
             await saveUserDetails(user);
             Navigator.of(context).pop();
             Navigator.of(context).pop();
